@@ -1,0 +1,320 @@
+/* ============================================================
+   France Deco : pages projet (Sèvres, Médéric, Concorde, Sources)
+   Mise en page épurée : photos + curseur avant / après.
+   Utilise les variables de style.css.
+   ============================================================ */
+
+.pj-head { padding-bottom: 0; }
+.pj-head h1 { margin: 0; }
+
+.pj-gallery {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pj-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.pj-gallery figure { margin: 0; }
+
+/* Photo pleine largeur : paysage 3/2 (défini par .frame) */
+.pj-full .frame { aspect-ratio: 3 / 2; }
+
+/* Deux photos verticales côte à côte */
+.pj-row .frame { aspect-ratio: 2 / 3; }
+
+.pj-gallery .frame img {
+  transition: transform 0.7s var(--ease);
+}
+
+.pj-gallery .shot:hover img {
+  transform: scale(1.025);
+}
+
+.pj-gallery .shot:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+/* Avant / Après */
+
+.pj-ba {
+  padding-bottom: clamp(3rem, 7vw, 5.5rem);
+}
+
+.pj-ba h2 {
+  margin: 0 0 1.5rem;
+}
+
+.ba-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ba-grid .ba-wide { grid-column: 1 / -1; }
+
+/* Une seule photo verticale : centrée, largeur raisonnable */
+.ba-grid .ba-tall:only-child,
+.ba-grid .ba-wide + .ba-tall:last-child {
+  grid-column: 1 / -1;
+  width: min(100%, 34rem);
+  justify-self: center;
+}
+
+.ba {
+  --pos: 50%;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: var(--ratio, 3 / 2);
+  background: var(--paper-deep);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+  line-height: 0;
+}
+
+.ba img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.ba .ba-after {
+  clip-path: inset(0 0 0 var(--pos));
+}
+
+.ba-tag {
+  position: absolute;
+  bottom: 0.75rem;
+  z-index: 1;
+  padding: 0.3rem 0.6rem;
+  background: rgba(26, 25, 23, 0.62);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.ba-tag-before { left: 0.75rem; }
+.ba-tag-after { right: 0.75rem; }
+
+.ba-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  z-index: 2;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--white);
+  box-shadow: 0 0 0 1px rgba(26, 25, 23, 0.12);
+  pointer-events: none;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 50%;
+  left: var(--pos);
+  z-index: 3;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: -1.375rem 0 0 -1.375rem;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(26, 25, 23, 0.28);
+  pointer-events: none;
+}
+
+.ba-handle::before,
+.ba-handle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  margin-top: -5px;
+  border: 5px solid transparent;
+}
+
+.ba-handle::before { left: 9px; border-right: 7px solid var(--navy); border-left-width: 0; }
+.ba-handle::after { right: 9px; border-left: 7px solid var(--navy); border-right-width: 0; }
+
+.ba input[type="range"] {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+.ba input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2px;
+  height: 100vh;
+}
+
+.ba input[type="range"]::-moz-range-thumb {
+  width: 2px;
+  height: 100vh;
+  border: 0;
+  background: transparent;
+}
+
+.ba input[type="range"]:focus-visible ~ .ba-handle {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+/* Projet précédent / suivant */
+
+.pj-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: clamp(3rem, 7vw, 5.5rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.pj-nav a {
+  font-family: var(--serif-text);
+  font-weight: 560;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.pj-nav a:hover { color: var(--navy); }
+.pj-nav .pj-all { font-size: 0.92rem; color: var(--muted); }
+
+@media (min-width: 640px) {
+  .pj-gallery, .pj-row, .ba-grid { gap: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pj-gallery .frame img { transition: none; }
+  .pj-gallery .shot:hover img { transform: none; }
+}
+
+/* Page Réalisations : avant/après en tête, puis aperçu des autres projets */
+
+.pj-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0.9rem 0 0;
+}
+
+.pj-caption strong {
+  font-family: var(--serif-text);
+  font-weight: 560;
+  font-size: 1.32rem;
+  letter-spacing: -0.02em;
+}
+
+.pj-strip {
+  margin-top: clamp(3rem, 7vw, 5rem);
+}
+
+.pj-strip-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.pj-strip-head h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.pj-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pj-strip-grid a {
+  display: block;
+  text-decoration: none;
+}
+
+.pj-strip-grid .frame { aspect-ratio: 1 / 1; }
+
+.pj-strip-grid .frame img { transition: transform 0.7s var(--ease); }
+.pj-strip-grid a:hover .frame img { transform: scale(1.04); }
+.pj-strip-grid a:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+
+.pj-more {
+  margin: clamp(3rem, 7vw, 5rem) 0 0;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .pj-strip-grid { gap: 1rem; }
+  .pj-strip-grid .frame { aspect-ratio: 4 / 3; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pj-strip-grid .frame img { transition: none; }
+  .pj-strip-grid a:hover .frame img { transform: none; }
+}
+
+/* Espace entre les boutons et le curseur avant/après (mobile et tablette) */
+@media (max-width: 959px) {
+  .hero-copy {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Concorde : titre à gauche, curseur avant / après à droite */
+.pj-head-split { padding-bottom: clamp(3rem, 7vw, 5.5rem); }
+
+.pj-split {
+  display: grid;
+  gap: 2rem;
+}
+
+.pj-split-ba { padding-bottom: 0; }
+
+.pj-split .ba-grid .ba-tall:only-child {
+  width: min(100%, 31rem);
+  justify-self: end;
+}
+
+@media (min-width: 860px) {
+  .pj-split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 31rem);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .pj-split .ba-grid .ba-tall:only-child { width: 100%; }
+}
