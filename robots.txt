@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://francedeco-paris.fr/sitemap.xml
