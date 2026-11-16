@@ -17,7 +17,7 @@
     <image:image><image:loc>https://francedeco-paris.fr/images/real-barber-vertical.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://francedeco-paris.fr/realisation.html</loc>
+    <loc>https://francedeco-paris.fr/realisation</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -37,7 +37,7 @@
     <image:image><image:loc>https://francedeco-paris.fr/images/Barber/interieur3.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://francedeco-paris.fr/galerie.html</loc>
+    <loc>https://francedeco-paris.fr/galerie</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -79,13 +79,13 @@
     <image:image><image:loc>https://francedeco-paris.fr/images/galerie/vasque-miroir-eclaire.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://francedeco-paris.fr/contact.html</loc>
+    <loc>https://francedeco-paris.fr/contact</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://francedeco-paris.fr/projet-sevres.html</loc>
+    <loc>https://francedeco-paris.fr/projet-sevres</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -100,7 +100,7 @@
     <image:image><image:loc>https://francedeco-paris.fr/images/sevres/08-Med-17-scaled.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://francedeco-paris.fr/projet-mederic.html</loc>
+    <loc>https://francedeco-paris.fr/projet-mederic</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -113,7 +113,7 @@
     <image:image><image:loc>https://francedeco-paris.fr/images/mederic/18-DSC00261-scaled.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://francedeco-paris.fr/projet-concorde.html</loc>
+    <loc>https://francedeco-paris.fr/projet-concorde</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -129,7 +129,7 @@
     <image:image><image:loc>https://francedeco-paris.fr/images/concorde/21-sans-titre-73-scaled.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://francedeco-paris.fr/projet-sources.html</loc>
+    <loc>https://francedeco-paris.fr/projet-sources</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -146,7 +146,7 @@
     <image:image><image:loc>https://francedeco-paris.fr/images/sources/08-DSC01104-scaled.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://francedeco-paris.fr/projet-barber.html</loc>
+    <loc>https://francedeco-paris.fr/projet-barber</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -157,5 +157,13 @@
     <image:image><image:loc>https://francedeco-paris.fr/images/Barber/interieur3.jpg</image:loc></image:image>
     <image:image><image:loc>https://francedeco-paris.fr/images/Barber/interieur4.jpg</image:loc></image:image>
     <image:image><image:loc>https://francedeco-paris.fr/images/Barber/interieur6.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://francedeco-paris.fr/confidentialite</loc>
+    <lastmod>2026-11-16</lastmod>
+  </url>
+  <url>
+    <loc>https://francedeco-paris.fr/mentions-legales</loc>
+    <lastmod>2026-11-16</lastmod>
   </url>
 </urlset>

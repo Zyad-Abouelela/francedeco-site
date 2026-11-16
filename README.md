@@ -16,11 +16,11 @@ Puis ouvrir [http://127.0.0.1:8742](http://127.0.0.1:8742).
 
 Les pages :
 
-- `index.html` — accueil
-- `realisation.html` — réalisations (avant/après Sèvres et accès aux projets)
-- `galerie.html` — galerie de photos
-- `projet-sevres.html`, `projet-mederic.html`, `projet-concorde.html`, `projet-sources.html`, `projet-barber.html` — pages détaillées des projets
-- `contact.html` — demande de devis
+- `/` — accueil
+- `realisation` — réalisations (avant/après Sèvres et accès aux projets)
+- `galerie` — galerie de photos
+- `projet-sevres`, `projet-mederic`, `projet-concorde`, `projet-sources`, `projet-barber` — pages détaillées des projets
+- `contact` — demande de devis
 
 ## Formulaire
 
@@ -33,9 +33,9 @@ Les photos `images/real-*.jpg` sont des chantiers (pièces et sols, sans personn
 ## Structure
 
 ```
-index.html
-realisation.html
-contact.html
+/
+realisation
+contact
 css/style.css
 js/main.js
 fonts/
