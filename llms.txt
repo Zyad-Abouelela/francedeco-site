@@ -1,22 +1,28 @@
+
 # France Déco Paris
 
-> France Déco Paris accompagne les particuliers
-> dans leurs projets de rénovation et de décoration
-> intérieure à Paris et en Île-de-France.
+> France Déco Paris est une entreprise spécialisée
+> dans la rénovation intérieure, la décoration,
+> la peinture et l'aménagement à Paris et en Île-de-France.
 
-## Présentation
+## Site officiel
 
-France Déco Paris propose des prestations
-de rénovation intérieure, d'aménagement
-et de décoration.
+- [Accueil](https://francedeco-paris.fr/)
+- [Contact](https://francedeco-paris.fr/contact.php)
 
-## Services
+## Nos prestations
 
-- Rénovation intérieure
-- Travaux de rénovation
-- Aménagement intérieur
-- Décoration intérieure
+- [Rénovation intérieure](https://francedeco-paris.fr/renovation.php)
+- [Peinture intérieure](https://francedeco-paris.fr/peinture.php)
+- [Décoration intérieure](https://francedeco-paris.fr/decoration.php)
 
-## Site internet
+## Nos réalisations
 
-https://francedeco-paris.fr/
+- [Réalisation Concorde](https://francedeco-paris.fr/concorde/)
+- [Réalisation Médéric](https://francedeco-paris.fr/mederic/)
+- [Réalisation Sèvres](https://francedeco-paris.fr/sevres/)
+- [Réalisation Sources](https://francedeco-paris.fr/sources/)
+
+## Informations
+
+- [Mentions légales](https://francedeco-paris.fr/mentions-legales.php)
