@@ -1,45 +1,44 @@
-# France Deco
+# France Deco — Site vitrine
 
-Site vitrine de **France Deco**, entreprise de bâtiment spécialisée dans la rénovation et la peinture.
+Site vitrine officiel de **France Deco**, entreprise du bâtiment spécialisée dans les travaux de rénovation intérieure, la peinture et la pose de revêtements de sol.
 
-Le site présente l’entreprise, le revêtement de sol, les autres interventions, et les chantiers. Les coordonnées publiées sont celles transmises pour France Deco.
+## 🏢 À propos de France Deco
 
-## Lancer le site
+**France Deco** accompagne les particuliers et les professionnels dans leurs projets d'aménagement, de remise à neuf et d'embellissement d'espaces intérieurs. Reconnue pour le soin apporté aux finitions et le respect des délais, l'entreprise intervient aussi bien sur des rénovations ciblées que sur des transformations complètes.
 
-Depuis la racine du projet :
+### Savoir-faire & Prestations
+* **Peinture & Finitions** : Préparation des supports, enduits, peinture décorative et remise en état des murs et plafonds.
+* **Revêtements de sol** : Pose et rénovation de parquets, sols stratifiés, sols souples (PVC/vinyle) et carrelages.
+* **Rénovation intérieure globale** : Réaménagement complet de pièces de vie, locaux commerciaux ou bureaux (cloisonnement, coordination des travaux et finitions).
 
-```bash
-python3 -m http.server 8742
-```
+---
 
-Puis ouvrir [http://127.0.0.1:8742](http://127.0.0.1:8742).
+## 🗂️ Pages du site
 
-Les pages :
+* **Accueil** (`/`) : Présentation de l'entreprise, de ses valeurs et de ses domaines d'intervention.
+* **Réalisations** (`/realisation`) : Vue d'ensemble des chantiers livrés, incluant un comparatif interactif avant/après (chantier de Sèvres) et l'accès aux études de cas.
+* **Études de cas (Projets détaillés)** :
+  * `/projet-sevres` — Rénovation à Sèvres
+  * `/projet-mederic` — Chantier Médéric
+  * `/projet-concorde` — Chantier Concorde
+  * `/projet-sources` — Chantier Les Sources
+  * `/projet-barber` — Aménagement d'un salon Barber
+* **Galerie** (`/galerie`) : Portfolio photographique mettant en valeur la qualité des finitions et des matériaux.
+* **Contact** (`/contact`) : Coordonnées directes de l'entreprise et formulaire de demande de devis gratuit.
 
-- `/` — accueil
-- `realisation` — réalisations (avant/après Sèvres et accès aux projets)
-- `galerie` — galerie de photos
-- `projet-sevres`, `projet-mederic`, `projet-concorde`, `projet-sources`, `projet-barber` — pages détaillées des projets
-- `contact` — demande de devis
+## 🛠️ Architecture & Technologies
 
-## Formulaire
+Conçu en **HTML5, CSS3 et JavaScript natif (Vanilla)**, le site privilégie la rapidité de chargement, la sobriété technique et une compatibilité optimale sur ordinateur comme sur mobile.
 
-Dans `js/main.js`, l’adresse de réception est `francedeco@live.fr`. Le formulaire envoie le message depuis le navigateur. La première demande déclenche un e-mail de confirmation FormSubmit sur cette adresse : il faut l’activer une fois pour que les messages suivants arrivent.
-
-## Visuels
-
-Les photos `images/real-*.jpg` sont des chantiers (pièces et sols, sans personne). Le logo reprend le visuel fourni pour France Deco.
-
-## Structure
-
-```
-/
-realisation
-contact
-css/style.css
-js/main.js
-fonts/
-images/
-```
-
-La police (Sans Serif FLF) est auto-hébergée dans `fonts/`, afin de ne pas dépendre d’un service tiers.
+```text
+├── index.html               # Page d'accueil
+├── realisation.html         # Page des réalisations (avant/après)
+├── galerie.html             # Galerie photo des chantiers
+├── contact.html             # Coordonnées et formulaire de devis
+├── projet-*.html            # Fiches détaillées des réalisations
+├── css/
+│   └── style.css            # Feuille de style principale
+├── js/
+│   └── main.js              # Interactions UI et gestion du formulaire
+├── fonts/                   # Police Sans Serif FLF auto-hébergée (RGPD / performances)
+└── images/                  # Logo officiel et visuels des réalisations (real-*.jpg)
