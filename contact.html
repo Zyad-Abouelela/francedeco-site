@@ -491,6 +491,13 @@
       if (new URLSearchParams(window.location.search).get("envoye") === "1") {
         document.getElementById("message-succes").hidden = false;
         document.getElementById("devis-form").hidden = true;
+    
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "form_submit",
+          form_id: "devis-form",
+          form_name: "Demande de devis"
+        });
       }
     </script>
 
